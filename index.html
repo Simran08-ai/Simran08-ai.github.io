@@ -105,6 +105,10 @@ section{padding:88px 0;border-top:1px solid var(--line);position:relative}
 .project p{font-size:.87rem;color:var(--muted);margin:13px 0 16px;position:relative}
 .project a{font-size:.82rem;color:var(--cyan);font-weight:700;position:relative}
 .project a:hover{color:white}
+
+.private-note{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;color:#c4b5fd;border-top:1px solid rgba(167,139,250,.18);padding-top:10px;position:relative}
+.private-note:before{content:"";width:6px;height:6px;border-radius:50%;background:#a78bfa;box-shadow:0 0 10px rgba(167,139,250,.6)}
+
 .skill-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
 .skill-group{padding:22px;border:1px solid var(--line);border-radius:13px;background:rgba(15,22,37,.72)}
 .skill-group h3{font-size:.76rem;letter-spacing:.13em;text-transform:uppercase;color:#9eacc1;margin:0 0 14px}
@@ -194,12 +198,12 @@ footer{padding:28px 0 38px;text-align:center;color:var(--muted2);font-size:.78re
 </section>
 
 <section id="projects" class="reveal">
-  <div class="section-top"><div><div class="eyebrow">04 / SELECTED WORK</div><h2 class="section-title">Projects &amp; research.</h2></div><p class="section-desc">A mix of machine learning, NLP, bioinformatics, imaging, and applied digital health.</p></div>
+  <div class="section-top"><div><div class="eyebrow">04 / SELECTED WORK</div><h2 class="section-title">Projects &amp; research.</h2></div><p class="section-desc">Selected work across machine learning, NLP, bioinformatics, imaging, and applied digital health.</p></div>
   <div class="project-grid">
     <article class="project"><div class="project-top"><h3>ME/CFS Steiger Classification</h3><span class="kind">R · ML</span></div><p>ML classification of ME/CFS using Steiger feature engineering — logistic regression, random forest, and SVM with leave-one-out cross-validation across datasets.</p><a href="https://github.com/Simran08-ai/mecfs-steiger-classification" target="_blank" rel="noopener">Explore on GitHub ↗</a></article>
     <article class="project"><div class="project-top"><h3>ME/CFS Cytokine Networks</h3><span class="kind">R · NETWORKS</span></div><p>Cytokine correlation network analysis for ME/CFS — reconstructing network structure and weighted edge relationships from cytokine data.</p><a href="https://github.com/Simran08-ai/mecfs-cytokine-networks" target="_blank" rel="noopener">Explore on GitHub ↗</a></article>
     <article class="project"><div class="project-top"><h3>Oral Lesion Cross-Site Transfer</h3><span class="kind">IMAGING</span></div><p>Cross-site generalization for oral lesion image classification — testing how well models trained on one site transfer to another, on openly available datasets.</p><a href="https://github.com/Simran08-ai/oral-lesion-cross-site-generalization" target="_blank" rel="noopener">Explore on GitHub ↗</a></article>
-    <article class="project"><div class="project-top"><h3>Breast Cancer Screening NLP</h3><span class="kind">PYTHON · NLP</span></div><p>NLP classification of breast-cancer screening focus-group data — TF-IDF, SVM, SBERT, and LLM-based coding of social-ecological barriers. Contributed to an accepted IEEE short paper.</p><a href="https://github.com/Simran08-ai" target="_blank" rel="noopener">View GitHub profile ↗</a></article>
+    <article class="project"><div class="project-top"><h3>Breast Cancer Screening NLP</h3><span class="kind">PYTHON · NLP</span></div><p>NLP classification of breast-cancer screening focus-group data — TF-IDF, SVM, SBERT, and LLM-based coding of social-ecological barriers. Contributed to an accepted IEEE short paper.</p><span class="private-note">Research details available upon request</span></article>
     <article class="project"><div class="project-top"><h3>KSHV G4–G4BP Discovery</h3><span class="kind">BIOINFORMATICS</span></div><p>ANKH protein-embedding pipeline ranking proteins by similarity to nucleolin to identify novel RNA G-quadruplex binding candidates from QuadRAtlas.</p><a href="https://github.com/Simran08-ai/KSHV-G4BP-discovery" target="_blank" rel="noopener">Explore on GitHub ↗</a></article>
     <article class="project"><div class="project-top"><h3>CareNest</h3><span class="kind">DIGITAL HEALTH</span></div><p>Caregiver-first smart-home concept for families living with dementia, informed by CDC BRFSS and CASAS Smart Home data.</p><a href="https://simran08-ai.github.io/carenest/" target="_blank" rel="noopener">View live project ↗</a></article>
   </div>
