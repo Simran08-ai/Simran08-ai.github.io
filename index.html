@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simran Chauhan — Health Data Scientist</title>
+<style>
+  :root{
+    --bg:#0b0f14; --panel:#141b24; --panel2:#1a2430;
+    --text:#e8eef4; --muted:#93a1b0; --line:#232e3b;
+    --accent:#2dd4bf; --accent2:#38bdf8; --glow:rgba(45,212,191,.15);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:
+      radial-gradient(900px 500px at 80% -10%, var(--glow), transparent),
+      radial-gradient(700px 400px at 0% 10%, rgba(56,189,248,.08), transparent),
+      var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.65; -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:900px; margin:0 auto; padding:0 20px}
+  section{padding:60px 0; border-top:1px solid var(--line)}
+  h2{font-size:1.55rem; margin-bottom:8px; letter-spacing:-.02em}
+  .h2sub{color:var(--muted); font-size:.95rem; margin-bottom:28px}
+  h3{font-size:1.08rem; margin-bottom:4px; letter-spacing:-.01em}
+  .muted{color:var(--muted)}
+  .tag{display:inline-block; background:var(--panel2); color:var(--muted);
+    border:1px solid var(--line); border-radius:20px; padding:3px 12px;
+    font-size:.8rem; margin:3px 4px 3px 0}
+
+  nav{position:sticky; top:0; background:rgba(11,15,20,.82);
+    backdrop-filter:blur(10px); border-bottom:1px solid var(--line); z-index:10}
+  nav .wrap{display:flex; align-items:center; justify-content:space-between; padding:14px 20px}
+  nav .logo{font-weight:700; letter-spacing:.08em; color:var(--accent)}
+  nav .links a{color:var(--muted); margin-left:20px; font-size:.92rem}
+  nav .links a:hover{color:var(--text); text-decoration:none}
+  @media(max-width:600px){ nav .links a{margin-left:12px; font-size:.8rem} }
+
+  .hero{padding:80px 0 56px}
+  .badge{display:inline-flex; align-items:center; gap:7px; background:var(--panel);
+    border:1px solid var(--line); border-radius:20px; padding:5px 14px;
+    font-size:.82rem; color:var(--muted); margin-bottom:22px}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);
+    box-shadow:0 0 0 3px var(--glow); animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+  .hero h1{font-size:3rem; letter-spacing:-.03em; line-height:1.08; margin-bottom:14px}
+  .hero .sub{font-size:1.2rem; color:var(--muted); margin-bottom:28px}
+  .hero .sub .accent{color:var(--accent2)}
+  .btns a{display:inline-block; margin:6px 10px 6px 0; padding:10px 18px;
+    border-radius:8px; font-size:.95rem; font-weight:500}
+  .btns .primary{background:var(--accent); color:#06231f}
+  .btns .primary:hover{opacity:.9; text-decoration:none}
+  .btns .ghost{border:1px solid var(--line); color:var(--text)}
+  .btns .ghost:hover{border-color:var(--accent); text-decoration:none}
+
+  .featured{background:linear-gradient(135deg,var(--panel),var(--panel2));
+    border:1px solid var(--line); border-radius:16px; padding:28px; margin-top:36px;
+    position:relative; overflow:hidden}
+  .featured::before{content:""; position:absolute; top:0; left:0; width:3px; height:100%;
+    background:linear-gradient(var(--accent),var(--accent2))}
+  .featured .label{font-size:.76rem; text-transform:uppercase; letter-spacing:.1em;
+    color:var(--accent); margin-bottom:10px}
+  .featured h3{font-size:1.4rem; margin-bottom:10px}
+  .featured .chips{margin:16px 0 18px}
+
+  .grid{display:grid; grid-template-columns:1fr 1fr; gap:16px}
+  @media(max-width:640px){ .grid{grid-template-columns:1fr} }
+  .card{background:var(--panel); border:1px solid var(--line); border-radius:12px;
+    padding:22px; transition:transform .15s, border-color .2s}
+  .card:hover{border-color:#3a4a5c; transform:translateY(-3px)}
+  .card .top{display:flex; justify-content:space-between; align-items:baseline; gap:10px; flex-wrap:wrap}
+  .card .date{color:var(--muted); font-size:.82rem; white-space:nowrap}
+  .card p{color:var(--muted); margin-top:8px; font-size:.94rem}
+  .card .links{margin-top:12px}
+  .card .links a{font-size:.88rem; margin-right:14px}
+
+  .exp{display:flex; gap:16px; padding:18px 0; border-bottom:1px solid var(--line)}
+  .exp:last-child{border-bottom:none}
+  .exp .when{color:var(--muted); font-size:.85rem; min-width:120px; flex-shrink:0}
+  @media(max-width:600px){ .exp{flex-direction:column; gap:4px} .exp .when{min-width:0} }
+
+  .skillgroup{margin-bottom:18px}
+  .skillgroup .gl{font-size:.78rem; text-transform:uppercase; letter-spacing:.06em;
+    color:var(--muted); margin-bottom:8px}
+
+  .statimg{display:block; margin:10px auto 0; max-width:100%; border-radius:10px}
+
+  footer{border-top:1px solid var(--line); padding:32px 0; text-align:center; color:var(--muted); font-size:.88rem}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <span class="logo">SC</span>
+  <span class="links">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </span>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <span class="badge"><span class="dot"></span>Open to roles &amp; research</span>
+  <h1>Simran Chauhan</h1>
+  <p class="sub">Health Data Scientist · <span class="accent">ML &amp; NLP on health data</span> · MS Health Informatics @ DePaul</p>
+  <div class="btns">
+    <a class="primary" href="#projects">View Projects</a>
+    <a class="ghost" href="https://github.com/Simran08-ai" target="_blank" rel="noopener">GitHub</a>
+    <a class="ghost" href="https://www.linkedin.com/in/simran-chauhan-197316161/" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="ghost" href="mailto:schauha7@depaul.edu">Email</a>
+  </div>
+
+  <div class="featured">
+    <div class="label">Featured Project</div>
+    <h3>AI-Driven G4–G4BP Discovery in KSHV</h3>
+    <p class="muted">A computational pipeline using ANKH protein-language-model embeddings to surface novel nucleolin-like RNA G-quadruplex binding protein candidates from QuadRAtlas data — ranking proteins by similarity to nucleolin to flag unannotated targets worth investigating.</p>
+    <div class="chips">
+      <span class="tag">Python</span>
+      <span class="tag">Protein embeddings</span>
+      <span class="tag">Bioinformatics</span>
+      <span class="tag">Cosine similarity</span>
+    </div>
+    <a href="https://github.com/Simran08-ai/KSHV-G4BP-discovery" target="_blank" rel="noopener">View on GitHub →</a>
+  </div>
+</div></header>
+
+<section id="about"><div class="wrap">
+  <h2>About</h2>
+  <p class="muted">I'm a Master's student in Health Informatics at DePaul University with a clinical background in dentistry (BDS). I work at the intersection of healthcare and data — building machine learning and NLP pipelines for biomedical problems, from cytokine-based disease classification to clinical-text analysis, medical imaging, and bioinformatics. I care about work where messy real-world health data meets solid, reproducible analysis.</p>
+</div></section>
+
+<section id="projects"><div class="wrap">
+  <h2>Projects</h2>
+  <div class="h2sub">A mix of ML, NLP, bioinformatics, imaging, and applied digital health.</div>
+  <div class="grid">
+
+    <div class="card">
+      <div class="top"><h3>ME/CFS Steiger Classification</h3><span class="date">R · ML</span></div>
+      <p>ML classification of ME/CFS using Steiger feature engineering — logistic regression, random forest, and SVM with leave-one-out cross-validation across datasets.</p>
+      <div class="links"><a href="https://github.com/Simran08-ai/mecfs-steiger-classification" target="_blank" rel="noopener">GitHub →</a></div>
+    </div>
+
+    <div class="card">
+      <div class="top"><h3>ME/CFS Cytokine Networks</h3><span class="date">R · networks</span></div>
+      <p>Cytokine correlation network analysis for ME/CFS — reconstructing network structure and weighted edge relationships from cytokine data.</p>
+      <div class="links"><a href="https://github.com/Simran08-ai/mecfs-cytokine-networks" target="_blank" rel="noopener">GitHub →</a></div>
+    </div>
+
+    <div class="card">
+      <div class="top"><h3>Oral Lesion Cross-Site Transfer</h3><span class="date">Jupyter · imaging</span></div>
+      <p>Cross-site generalization for oral lesion image classification — testing how well models trained on one site transfer to another, on openly available datasets.</p>
+      <div class="links"><a href="https://github.com/Simran08-ai/oral-lesion-cross-site-generalization" target="_blank" rel="noopener">GitHub →</a></div>
+    </div>
+
+    <div class="card">
+      <div class="top"><h3>CareNest</h3><span class="date">digital health</span></div>
+      <p>Caregiver-first smart-home concept for families living with dementia. Used CDC BRFSS and CASAS Smart Home data to shape a caregiver app and clinician dashboard.</p>
+      <div class="links">
+        <a href="https://simran08-ai.github.io/carenest/" target="_blank" rel="noopener">Live site →</a>
+        <a href="https://github.com/Simran08-ai/carenest" target="_blank" rel="noopener">GitHub →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="top"><h3>Breast Cancer Screening NLP</h3><span class="date">Python · NLP</span></div>
+      <p>NLP classification of breast-cancer screening focus-group data — TF-IDF, SVM, SBERT, and LLM-based coding of social-ecological barriers. Contributed to an accepted IEEE short paper.</p>
+      <div class="links"><span class="muted" style="font-size:.88rem">Repo coming soon — <a href="https://github.com/Simran08-ai" target="_blank" rel="noopener">see GitHub</a></span></div>
+    </div>
+
+    <div class="card">
+      <div class="top"><h3>KSHV G4–G4BP Discovery</h3><span class="date">Python · bio</span></div>
+      <p>ANKH protein-embedding pipeline ranking proteins by similarity to nucleolin to identify novel RNA G-quadruplex binding candidates from QuadRAtlas.</p>
+      <div class="links"><a href="https://github.com/Simran08-ai/KSHV-G4BP-discovery" target="_blank" rel="noopener">GitHub →</a></div>
+    </div>
+
+  </div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <h2>Experience</h2>
+  <div class="h2sub">Research and clinical.</div>
+
+  <div class="exp">
+    <div class="when">Mar 2025 – Present</div>
+    <div>
+      <h3>Graduate Research Assistant — DePaul University</h3>
+      <p class="muted">ML and NLP research across biomedical domains: ME/CFS cytokine classification and network analysis, breast-cancer screening NLP, oral-lesion imaging, and RNA G-quadruplex / KSHV bioinformatics. Build reproducible pipelines in Python and R.</p>
+    </div>
+  </div>
+
+  <div class="exp">
+    <div class="when">Oct 2026 – Present</div>
+    <div>
+      <h3>Dental Researcher</h3>
+      <p class="muted">Identifying under-explored dental research directions at the intersection of dentistry and AI, working toward publication.</p>
+    </div>
+  </div>
+
+  <div class="exp">
+    <div class="when">India</div>
+    <div>
+      <h3>Dental Surgeon (BDS) — Clinical Practice</h3>
+      <p class="muted">Clinical dental practice following a Bachelor of Dental Surgery — the background that shaped my move into health data.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <h2>Skills</h2>
+  <div class="skillgroup"><div class="gl">Languages</div>
+    <span class="tag">Python</span><span class="tag">R</span><span class="tag">SQL</span></div>
+  <div class="skillgroup"><div class="gl">ML &amp; NLP</div>
+    <span class="tag">scikit-learn</span><span class="tag">logistic regression</span><span class="tag">random forest</span><span class="tag">XGBoost</span><span class="tag">SVM</span><span class="tag">TF-IDF</span><span class="tag">SBERT</span><span class="tag">LLMs</span></div>
+  <div class="skillgroup"><div class="gl">Data &amp; Viz</div>
+    <span class="tag">pandas</span><span class="tag">NumPy</span><span class="tag">Jupyter</span><span class="tag">Tableau</span><span class="tag">Power BI</span><span class="tag">Excel</span></div>
+</div></section>
+
+<section id="education"><div class="wrap">
+  <h2>Education</h2>
+  <div class="exp">
+    <div class="when">Chicago, IL</div>
+    <div>
+      <h3>MS, Health Informatics — DePaul University</h3>
+      <p class="muted">Coursework: Healthcare Data Analytics, Machine Learning in Healthcare, Clinical Decision Support Systems, EHR.</p>
+    </div>
+  </div>
+  <div class="exp">
+    <div class="when">2015 – 2021</div>
+    <div>
+      <h3>Bachelor of Dental Surgery (BDS)</h3>
+      <p class="muted">Himachal Dental College.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <h2>Contact</h2>
+  <p class="muted" style="margin-bottom:18px">Open to internships, research roles, and full-time opportunities in health data science.</p>
+  <div class="btns">
+    <a class="primary" href="mailto:schauha7@depaul.edu">Email me</a>
+    <a class="ghost" href="https://www.linkedin.com/in/simran-chauhan-197316161/" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="ghost" href="https://github.com/Simran08-ai" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</div></section>
+
+<footer>
+  Simran Chauhan · Chicago, IL · 2026
+</footer>
+
+</body>
+</html>
